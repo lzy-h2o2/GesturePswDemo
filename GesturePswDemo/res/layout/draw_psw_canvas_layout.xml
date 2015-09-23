@@ -1,0 +1,82 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#00AAEE" >
+
+    <RelativeLayout
+        android:id="@+id/top_layout"
+        android:layout_width="match_parent"
+        android:layout_height="46dip"
+        android:background="#000000"
+        android:paddingLeft="20dip"
+        android:paddingRight="20dip"
+        android:layout_alignParentTop="true" >
+
+        <TextView
+            android:id="@+id/text_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:text="设置手势密码"
+            android:textSize="20sp"
+            android:textColor="@android:color/white" />
+
+        <TextView
+            android:id="@+id/text_cancel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:gravity="right"
+            android:text="跳过"
+            android:textSize="18sp"
+            android:textColor="@android:color/white" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/gesture_tip_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/top_layout"
+        android:gravity="center"
+        android:orientation="vertical" >
+
+        <com.lzy.gesture.weiget.LockIndicator
+            android:id="@+id/lock_indicator"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dip" />
+
+        <TextView
+            android:id="@+id/text_tip"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:text="绘制解锁图片"
+            android:textColor="@android:color/white"
+            android:layout_marginTop="10dip" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/text_show"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="20dp"
+        android:text="设置手势密码，巴拉巴拉巴拉。"
+        android:textColor="@android:color/white" />
+    
+    <FrameLayout
+        android:id="@+id/gesture_container"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/gesture_tip_layout"
+        android:layout_above="@id/text_show"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="20dip" >
+    </FrameLayout>
+
+</RelativeLayout>
+
